@@ -7,7 +7,7 @@
 void ofApp::setup(){
 	std::random_device rd;
 	std::mt19937 gen(rd());//uses random_device to seed engine
-	std::uniform_int_distribution<> dis1(0,1200);
+	std::normal_distribution<> dis1(1000,15);
 	
 	
 	for(int n=0 ;  n < 20 ; n++) 
@@ -15,7 +15,7 @@ void ofApp::setup(){
         X.push_back(dis1(gen));// same output each time
     }
     
-    std::uniform_int_distribution<> dis2(0,970);
+    std::normal_distribution<> dis2(800,15);
 	
 
 	for(int m=0 ;  m < 20 ; m++) 
